@@ -12,7 +12,7 @@ public class Driver {
     //Similar to TestBase, This is a utilities class
     private static WebDriver driver;
     //setup, create, and return the driver instance
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver(String s){
         /*
         If driver is not being used, if it is not pointing anywhere, then instantiate the driver
         We want to use only one driver in the entire framework

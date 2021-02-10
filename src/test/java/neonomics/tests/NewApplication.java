@@ -31,16 +31,19 @@ public class NewApplication extends TestBase {
         DevPortalLoginPage devPortalLogin=new DevPortalLoginPage(driver);
         devPortalLogin.UserName.sendKeys(ConfigReader.getProperty("username"));
         devPortalLogin.Password.sendKeys(ConfigReader.getProperty("password"));
+        Thread.sleep(2000);
         devPortalLogin.Login.click();
-
+        Thread.sleep(2000);
         DeveloperPortalPage developerPortalPage=new DeveloperPortalPage(driver);
         developerPortalPage.NewApplication.click();
         developerPortalPage.ApplicationName.sendKeys("Test Application");
         developerPortalPage.ApplicationDescription.sendKeys("The user needs to get all accounts from a given bank.");
+        Thread.sleep(2000);
         developerPortalPage.Next.click();
         developerPortalPage.AccountData.click();
         developerPortalPage.PaymentInitiation.click();
-        //developerPortalPage.GenetareIDs.click();
+        developerPortalPage.GenetareIDs.click();
+        Thread.sleep(2000);
 
 
 
